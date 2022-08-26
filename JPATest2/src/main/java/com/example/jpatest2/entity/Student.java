@@ -16,7 +16,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Entity
 @Table(name="student")
-@IdClass(StudentID.class)
+@IdClass(StudentId.class)
 public class Student implements Serializable {
 
     @Id
@@ -24,9 +24,9 @@ public class Student implements Serializable {
     private String studentId;
 
     @Id
-    private String anme;
+    private String name;
 
-    @ManyToOne //다대일 관계
+    @ManyToOne (cascade = CascadeType.MERGE)//다대일 관계
     @JoinColumn(name="school_id")  // name의 school_id = school테이블을 매핑하는 엔티티의 변수명이 id인것에 매핑, 연관관계 주인인 엔티티
     @NotFound(action= NotFoundAction.IGNORE)
     private School school;

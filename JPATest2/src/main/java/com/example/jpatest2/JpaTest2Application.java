@@ -22,10 +22,30 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 
+/**
+ *    CasedType
+ *   CascadeType은 다중성(Multiplicity)의 속성 중 하나로 연관 엔티티에 대한 영속성 처리 설정을 해주기 위해 사용됩니다.
+ *
+     * 사용되는 설정 타입은 다음과 같이 존재합니다.
+     * CascadeType.DETACH
+     * CascadeType.MERGE
+     * CascadeType.PERSIST
+     * CascadeType.REFRESH
+     * CascadeType.REMOVE
+     * CascadeType.ALL
+
+     * 설정타입 모두 엔티티가 Cascade Type에 속하는 기능을 수행했을 때 연관 엔티티도 동일한 기능을 수행하도록 해줍니다. (ALL은 모든 타입이 적용)
+     * 참고적으로 Cascade Type은 연관 엔티티에도 영향을 미치기 때문에 정말 필요한 타입만 명시하여 사용하는 것이 좋습니다.
+ *
+ *
+ */
+
 @SpringBootApplication
 public class JpaTest2Application {
     public static void main(String[] args) {
         SpringApplication.run(JpaTest2Application.class, args);
     }
+
+
 
 }

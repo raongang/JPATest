@@ -24,5 +24,4 @@ public class StudentRepositoryTest {
         System.out.println(studentRepository.findById(new StudentID("0000", "유가네")).toString());
     }
 
-
 }
