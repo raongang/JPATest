@@ -63,7 +63,7 @@ public class StudentRepositoryTests {
         school.setName("충남 고등학교");
         school.setRegion("충남");
         school.setRanking(5);
-        schoolRepository.save(school);
+        //schoolRepository.save(school);
 
 
         Student student = new Student();
@@ -80,8 +80,8 @@ public class StudentRepositoryTests {
 
 
     // Find 에러 발생 케이스 - 양방향일때 @Data를 쓰면 toString()문제가 생김
-    @Test
-    public void studentSelect(){
-        logger.info(studentRepository.findAll().toString());
-    }
+//    @Test
+//    public void studentSelect(){
+//        logger.info(studentRepository.findAll().toString());
+//    }
 }

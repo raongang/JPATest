@@ -11,7 +11,7 @@ import java.util.List;
 
 @Setter
 @Getter
-@ToString(exclude = {"students"})
+//@ToString(exclude = {"students"})
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,7 +21,7 @@ public class School implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="school_id")
+    //@Column(name="school_id")
     int id;
 
     private String name;
@@ -33,8 +33,9 @@ public class School implements Serializable {
     private List<Student> students;
 
     void add(Student student){
-        student.setSchool(this);
-      getStudents().add(student);
+        //student.setSchool(this);
+       //getStudents().add(student);
+       this.students.add(student);
     }
 
 
