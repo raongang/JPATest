@@ -63,6 +63,8 @@ public class StudentRepositoryTests {
         school.setName("충남 고등학교");
         school.setRegion("충남");
         school.setRanking(5);
+        schoolRepository.save(school);
+
 
         Student student = new Student();
         student.setStudentId("1111");
@@ -70,10 +72,10 @@ public class StudentRepositoryTests {
         student.setSchool(school);
         student.setScore(95);
 
-        //studentRepository.save(student);
+        studentRepository.save(student);
 
         //연관관계의 주인이 student이기 떄문에 school데이터만 생성됨.
-        schoolRepository.save(school);
+
     }
 
 

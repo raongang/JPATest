@@ -32,6 +32,10 @@ public class School implements Serializable {
     @OneToMany(mappedBy = "school")
     private List<Student> students;
 
+    void add(Student student){
+        student.setSchool(this);
+      getStudents().add(student);
+    }
 
 
 }
